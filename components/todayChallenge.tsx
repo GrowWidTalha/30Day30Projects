@@ -6,7 +6,7 @@ import { Challenge } from '@/lib/types.appwrite'
 const TodayChallenge = ({challenge}: {challenge: Challenge}) => {
   return (
     <section className="mb-12">
-    <h2 className="text-2xl font-semibold mb-4">Today's Challenge</h2>
+    <h2 className="text-2xl font-semibold mb-4">Today&apos;s Challenge</h2>
     <Card>
       <CardHeader>
         <CardTitle>{challenge.name}</CardTitle>
