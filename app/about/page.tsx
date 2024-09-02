@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 export default function ChallengePage() {
   return (
     <div className="flex flex-col min-h-screen">
+      <Navbar />
       <main className="flex-1 flex flex-col items-center justify-center py-12 px-4 md:px-6 lg:px-8">
         <section className="w-full max-w-4xl text-center space-y-8">
           <h1 className="text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
@@ -19,6 +20,9 @@ export default function ChallengePage() {
           </p>
           <p className="text-lg text-muted-foreground md:text-xl">
             The key to success in the <strong>30 Days 30 Projects Challenge</strong> is consistency. Even if you can only dedicate a short amount of time to your project on busy days, working steadily towards your goal will lead to significant progress. By focusing on completing a small project daily, you&apos;ll be amazed at how quickly your coding skills and confidence will grow.
+          </p>
+          <p className="text-lg text-muted-foreground md:text-xl">
+            All projects in this challenge are built using <strong>Next.js</strong>, a powerful framework that combines the best features of React and server-side rendering. This will give you hands-on experience with one of the most in-demand technologies in web development today, preparing you for real-world coding challenges.
           </p>
           <p className="text-lg text-muted-foreground md:text-xl">
             This challenge is led by <strong>Asharib Ali</strong> (Student Ambassador & Teaching Faculty Member) and aims to inspire thousands of students at GIAIC to dive into coding with cutting-edge technologies and the latest tech stacks. Primarily organized for our official community on Discord, the challenge has a dedicated channel where participants can share their projects, seek feedback, and support one another.
