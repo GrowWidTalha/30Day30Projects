@@ -19,7 +19,7 @@ const MySolutionsPage = async () => {
   if (solutions?.total === 0) return (
     <div className="flex flex-col items-center justify-center min-h-screen text-center">
       <h1 className="text-2xl font-bold mb-4">No Solutions Found</h1>
-      <p className="text-muted-foreground">You haven't submitted any solutions yet. Start coding and come back to see your progress!</p>
+      <p className="text-muted-foreground">You haven&apos;t submitted any solutions yet. Start coding and come back to see your progress!</p>
     </div>
   )
 
