@@ -55,7 +55,7 @@ export default function Component() {
   );
 }
 
-function CodeIcon(props) {
+function CodeIcon(props: any) {
   return (
     <svg
       {...props}
