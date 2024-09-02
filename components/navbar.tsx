@@ -11,14 +11,11 @@ const Navbar = () => {
       <span className="font-bold text-xl">30-Day 30-Projects</span>
     </Link>
     <nav className="ml-auto flex gap-4 sm:gap-6">
-      <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+      <Link href="/about" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
         About
       </Link>
-      <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+      <Link href="/auth/sign-up" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
         Projects
-      </Link>
-      <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-        Leaderboard
       </Link>
       <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
         Community
