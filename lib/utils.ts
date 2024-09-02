@@ -1,4 +1,3 @@
-import { Appointment } from "@/types/appwrite.types";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -78,48 +77,8 @@ export function decryptKey(passkey: string) {
 }
 
 
-interface AppointmentCategories {
-  recentAppointments: Appointment[];
-  todayAppointments: Appointment[];
-  upcomingAppointments: Appointment[];
-}
 
-export function filterAppointments(appointments: Appointment[]): AppointmentCategories {
-  const now = new Date();
 
-  const recentAppointments = appointments.filter(appointment => {
-    const appointmentDate = new Date(appointment.schedule);
-
-    return (
-      appointmentDate < now &&
-      appointmentDate.toDateString() !== now.toDateString()
-    );
-  });
-
-  const todayAppointments = appointments.filter(appointment => {
-    const appointmentDate = new Date(appointment.schedule);
-
-    return (
-      appointmentDate.toDateString() === now.toDateString() &&
-      appointment.status === "scheduled"
-    );
-  });
-
-  const upcomingAppointments = appointments.filter(appointment => {
-    const appointmentDate = new Date(appointment.schedule);
-
-    return (
-      appointmentDate > now &&
-      appointment.status === "scheduled"
-    );
-  });
-
-  return {
-    recentAppointments,
-    todayAppointments,
-    upcomingAppointments,
-  };
-}
 
 /**
  * Calculates age based on the date of birth.
@@ -139,36 +98,4 @@ export function calculateAge(dob: string | Date): string {
     }
 
     return `${age}`;
-  }
-
-  interface ChartDataPoint {
-    date: string
-    count: number
-  }
-  export function prepareAppointmentChartData(appointments: Appointment[]): ChartDataPoint[] {
-    const today = new Date()
-    const thirtyDaysAgo = new Date(today.getTime() - 30 * 24 * 60 * 60 * 1000)
-
-    // Create an array of the last 30 days
-    const last30Days = Array.from({ length: 30 }, (_, i) => {
-      const date = new Date(today.getTime() - i * 24 * 60 * 60 * 1000)
-      return date.toISOString().split('T')[0]
-    }).reverse()
-
-    // Count appointments for each day
-    const appointmentCounts = appointments.reduce((acc, appointment) => {
-      const date = new Date(appointment.$createdAt).toISOString().split('T')[0]
-      if (new Date(date) >= thirtyDaysAgo) {
-        acc[date] = (acc[date] || 0) + 1
-      }
-      return acc
-    }, {} as Record<string, number>)
-
-    // Create chart data with all 30 days, filling in zeros for days with no appointments
-    const chartData: ChartDataPoint[] = last30Days.map(date => ({
-      date,
-      count: appointmentCounts[date] || 0
-    }))
-
-    return chartData
   }
