@@ -26,7 +26,7 @@ const MySolutionsPage = async () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-2">My Solutions</h1>
-      <p className="text-muted-foreground mb-6">Here are all the coding challenges you've tackled so far.</p>
+      <p className="text-muted-foreground mb-6">Here are all the coding challenges you&apos;ve tackled so far.</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {solutions.documents.map((solution) => (
           <div key={solution.$id} className="bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
