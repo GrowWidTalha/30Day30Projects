@@ -24,7 +24,8 @@ export const createChallenge = async ({ dayNo, briefDescription, completeDescrip
     );
 
     // Revalidate paths related to challenges
-    revalidatePath("/challenge");
+    revalidatePath("/app");
+    revalidatePath("/app/challenge/[challengeId]");
     revalidatePath("/admin");
 
     return parseStringify(document);
@@ -59,7 +60,8 @@ export const deleteChallengeById = async (id: string) => {
 
     // Revalidate paths related to challenges
     revalidatePath("/admin");
-    revalidatePath(`/challenge`);
+    revalidatePath(`/app/challenge/[challengeId]`);
+    revalidatePath(`/app`);
 
     return parseStringify(document);
   } catch (error) {
@@ -80,7 +82,7 @@ export const updateChallenge = async (id: string, challenge: createChallengeProp
     // Revalidate paths related to challenges
     revalidatePath("/admin");
     revalidatePath(`/challenge/${id}`);
-
+revalidatePath("/app")
     return parseStringify(document);
   } catch (error) {
     console.log("Error occurred while updating challenge: ", error);
