@@ -13,7 +13,7 @@ export default function Component() {
     const { userId, } = auth()
     if(userId) redirect("/app")
     return (
-    <div className="flex flex-col">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-1 flex flex-col items-center justify-center">
         <section className="w-full py-12 md:py-24 lg:py-32 flex flex-col items-center justify-center">
@@ -40,16 +40,13 @@ export default function Component() {
         </section>
       </main>
 
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t text-center">
-        <p className="text-xs text-muted-foreground">&copy; 2024 30 Day 30 Projects. All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
-            Privacy
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t text-center bg-gray-900 text-white">
+        <p className="text-xs">
+          Made with 💖 by
+          <Link href="https://linkedin.com/in/growwithtalha-webdeveloper" className="ml-1 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 hover:underline">
+            Talha Ali
           </Link>
-          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
-            Terms of Service
-          </Link>
-        </nav>
+        </p>
       </footer>
     </div>
   );
