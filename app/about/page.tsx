@@ -12,13 +12,13 @@ export default function ChallengePage() {
             About the 30 Days 30 Projects Challenge
           </h1>
           <p className="text-lg text-muted-foreground md:text-xl">
-            The <strong>30 Days 30 Projects Challenge</strong> is a fast-paced, project-based coding journey designed to boost your skills through hands-on practice! Over the course of 30 days, you'll commit to building a unique project each day, helping you rapidly improve your coding abilities and expand your portfolio, whether you're a beginner or already have some coding experience.
+            The <strong>30 Days 30 Projects Challenge</strong> is a fast-paced, project-based coding journey designed to boost your skills through hands-on practice! Over the course of 30 days, you&apos;ll commit to building a unique project each day, helping you rapidly improve your coding abilities and expand your portfolio, whether you&apos;re a beginner or already have some coding experience.
           </p>
           <p className="text-lg text-muted-foreground md:text-xl">
-            One of the biggest challenges in learning to code is maintaining consistency and motivation. The <strong>30 Days 30 Projects Challenge</strong> tackles this by setting a clear goal: build one project every day. By sharing your progress on social media with the hashtag <code>#30Days30Projects</code>, you can connect with others taking the challenge, celebrate each other's successes, and stay motivated together.
+            One of the biggest challenges in learning to code is maintaining consistency and motivation. The <strong>30 Days 30 Projects Challenge</strong> tackles this by setting a clear goal: build one project every day. By sharing your progress on social media with the hashtag <code>#30Days30Projects</code>, you can connect with others taking the challenge, celebrate each other&apos;s successes, and stay motivated together.
           </p>
           <p className="text-lg text-muted-foreground md:text-xl">
-            The key to success in the <strong>30 Days 30 Projects Challenge</strong> is consistency. Even if you can only dedicate a short amount of time to your project on busy days, working steadily towards your goal will lead to significant progress. By focusing on completing a small project daily, you'll be amazed at how quickly your coding skills and confidence will grow.
+            The key to success in the <strong>30 Days 30 Projects Challenge</strong> is consistency. Even if you can only dedicate a short amount of time to your project on busy days, working steadily towards your goal will lead to significant progress. By focusing on completing a small project daily, you&apos;ll be amazed at how quickly your coding skills and confidence will grow.
           </p>
           <p className="text-lg text-muted-foreground md:text-xl">
             This challenge is led by <strong>Asharib Ali</strong> (Student Ambassador & Teaching Faculty Member) and aims to inspire thousands of students at GIAIC to dive into coding with cutting-edge technologies and the latest tech stacks. Primarily organized for our official community on Discord, the challenge has a dedicated channel where participants can share their projects, seek feedback, and support one another.
